@@ -1,0 +1,21 @@
+.content-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6.5rem;
+  margin: 5rem auto;
+  width: 80%;
+}
+
+@media screen and (max-width: 576px) {
+  .content-body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+    width: 100%;
+
+    flex-direction: column;
+  }
+}

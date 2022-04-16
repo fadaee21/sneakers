@@ -1,0 +1,38 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+}
+.description-content > p:nth-child(1) {
+  color: var(--orange);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.description-content > h1 {
+  font-size: 3rem;
+  color: var(--Black-opacity25);
+}
+.description-content > p:nth-child(3) {
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.4px;
+}
+
+@media screen and (max-width: 576px) {
+  .description {
+    width: 100vw;
+    padding: 1rem;
+  }
+  .description-content > h1 {
+    font-size: 1.7rem;
+  }
+  .description-content > p:nth-child(3) {
+    font-size: 0.8rem;
+  }
+  .description-content > p:nth-child(1) {
+    font-size: 0.8rem;
+  }
+ 
+}
