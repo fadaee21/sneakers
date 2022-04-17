@@ -45,7 +45,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       dispatch({ type: "HIDE_NOTIFICATION" });
-    }, 3000);
+      }, 3000);
     return () => {
       clearTimeout(timer);
     };
