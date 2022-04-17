@@ -26,9 +26,9 @@ export const Header = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <ul className={`header-list ${slideOn ? "slide-on" : ""}`}>
-                    <span
+                    <li
                         onClick={() => setSlideOn(false)}
-                        className='close-sidebar' ></span>
+                        className='close-sidebar' ></li>
                     <li>Collections</li>
                     <li>Men</li>
                     <li>Women</li>
