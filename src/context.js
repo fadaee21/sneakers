@@ -11,13 +11,13 @@ const initialState = {
   total: 0,
   amount: 0,
   handleError: false,
-  imageNum: 1
+  imageNum: 0
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [openModal, setOpenModal] = useState(false);
-  // const [imageNum, setImageNum] = useState(0);
+  const [imageNum, setImageNum] = useState(0);
   const [slideOn, setSlideOn] = useState(false);
 
   const modalOpening = () => {
@@ -53,27 +53,22 @@ const AppProvider = ({ children }) => {
   }, [state]);
 
 
-  const next = () => { 
-    dispatch({type:"NEXT"})
-   }
-  const prev = () => { 
-    dispatch({type:"PREV"})
-   }
+  
 
-  // const next = () => {
-  //   if (imageNum < 3) {
-  //     setImageNum(imageNum + 1);
-  //   } else {
-  //     setImageNum(0);
-  //   }
-  // };
-  // const prev = () => {
-  //   if (imageNum === 0) {
-  //     setImageNum(3);
-  //   } else {
-  //     setImageNum(imageNum - 1);
-  //   }
-  // };
+  const next = () => {
+    if (imageNum < 3) {
+      setImageNum(imageNum + 1);
+    } else {
+      setImageNum(0);
+    }
+  };
+  const prev = () => {
+    if (imageNum === 0) {
+      setImageNum(3);
+    } else {
+      setImageNum(imageNum - 1);
+    }
+  };
   return (
     <AppContext.Provider
       value={{
@@ -84,11 +79,13 @@ const AppProvider = ({ children }) => {
         modalClosing,
         modalOpening,
         hideNotification,
+        imageNum,
+        setImageNum,
         clearCart,
         next,
+        prev,
         slideOn,
-        setSlideOn,
-        prev
+        setSlideOn
       }}
     >
       {children}

@@ -46,7 +46,6 @@
   justify-content: flex-end;
   align-items: center;
   /* margin-right: 2rem; */
-  
 }
 .header-img > img:nth-child(2) {
   cursor: pointer;
@@ -149,7 +148,6 @@
   }
   .slide-on {
     transform: translateX(0) !important ;
-    
   }
 
   .header-list li {
@@ -174,5 +172,8 @@
   .cart-icon span {
     scale: 0.7;
     transform: translate(270%, 50%);
+  }
+  .cart-icon > span:nth-child(2) {
+    right: 54px;
   }
 }

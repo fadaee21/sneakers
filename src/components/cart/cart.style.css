@@ -39,3 +39,14 @@
   font-weight: bold;
   color: #5e5959;
 }
+
+@media screen and (max-width: 576px) {
+  .cart {
+    width: 330px;
+    border-radius: 10px 10px 10px 10px;
+    top: 2.5rem;
+    right: -100%;
+    z-index: 1;
+  }
+  
+}

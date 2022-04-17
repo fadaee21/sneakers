@@ -23,7 +23,7 @@ export const Cart = () => {
                     <div key={id} className='cart-content' >
                         <img src={thumbnail[0]} alt={name} />
                         <div className="name-price">
-                            <p>{name}</p>
+                            <p>{name.substring(0, 20)}...</p>
                             <p>$ {price} x {amount}
                                 <span>$ {price * amount}</span>
                             </p>

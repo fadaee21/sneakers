@@ -7,18 +7,21 @@ import { Cart } from '../cart/Cart'
 import burgerMenu from '../../assets/images/icon-menu.svg'
 import './header.style.css'
 export const Header = () => {
-    const { amount  ,slideOn, setSlideOn } = useGlobalContext()
+    const { amount, slideOn, setSlideOn } = useGlobalContext()
     const [showCart, setShowCart] = useState(false)
-
     const handleClick = () => {
         setShowCart(!showCart)
+    }
+    const openSlideCloseCart = () => {
+        setSlideOn(true);
+        setShowCart(false)
     }
     return (
         <div className="header">
             <div className="header-content">
                 <div className='header-logo'>
                     <img
-                        onClick={() => setSlideOn(true)}
+                        onClick={() => openSlideCloseCart()}
                         className='burgerMenu' src={burgerMenu} alt="burger menu" />
                     <img src={logo} alt="logo" />
                 </div>
